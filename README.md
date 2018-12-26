@@ -25,7 +25,7 @@ Atom
 ## 创建项目
 diango-admin startproject myblog  
 
-# 运行项目
+## 运行项目
 先切换到myblog文件夹，输入以下命令运行项目     
 F:\github-project\myblog>python manage.py runserver  
 Performing system checks...  
@@ -38,3 +38,6 @@ December 27, 2018 - 00:17:11
 Django version 2.0, using settings 'myblog.settings'  
 Starting development server at http://127.0.0.1:8000/  
 Quit the server with CTRL-BREAK.  
+
+浏览器输入：127.0.0.1:8000
+![django界面前端](/index.png)
