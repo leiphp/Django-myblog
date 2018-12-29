@@ -90,5 +90,5 @@ admin.site.register(Article)
 ![后台界面](/admin.jpg)  
 
 **修改Article显示的标题**  
-1.python3添加__str__(self)或__unicode_(self)
-2.return self.title 
+1.python3添加__str__(self)或__unicode_(self)  
+2.return self.title
