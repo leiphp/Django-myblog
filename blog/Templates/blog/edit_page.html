@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Page</title>
+  </head>
+  <body>
+    <form  action="{% url 'blog:edit_action' %}" method="post">
+      {% csrf_token %}
+      <label>文章标题
+        <input type="text" name="title"/>
+      </label>
+      <br/>
+      <label>文章内容
+        <input type="text" name="content"/>
+      </label>
+      <br/>
+      <input type="submit" value="提交">
+    </form>
+  </body>
+</html>
