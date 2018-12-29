@@ -41,3 +41,50 @@ Quit the server with CTRL-BREAK.
 
 浏览器输入：127.0.0.1:8000
 ![django界面前端](/index.png)
+
+## 开发步骤  
+**生成数据表**  
+1.命令行进入manage.py同级目录
+2.执行python manage.py makemigrations app名（可选，不选创建全部）  
+3.再执行python manage.py migrate  （生成移植文件Django-myblog\blog\migrations\0001_initial.py）
+
+**查看生成表的SQL语句**  
+1.命令行进入manage.py同级目录  
+2.执行python manage.py sqlmigrate app名 文件ID(python manage.py sqlmigrate blog 0001)
+
+**打开数据库编辑文章数据**
+下载：sqlite expert personal  
+或者用其他的数据管理软件，能管理sqlite3即可
+
+**取出数据**  
+views.py编写：  
+from . import models  
+article=models.Article.objects.get(pk=1)#传递article对象  
+return render(request, 'blog/index.html',{'article':article})  
+template/blog/index.html编写：  
+<h1>{{article.title}}</h1>  
+<h3>{{article.content}}</h3>  
+
+**admin创建超级用户**   
+1.命令行进入manage.py同级目录  
+2.执行python manage.py createsuperuser (回车)  
+3.username:admin  
+4.Password:100txycom  
+5.http://127.0.0.1:8000/admin/ #登录后台  
+6.设置中文LANGUAGE_CODE = 'zh_Hans'  
+
+**配置admin应用**
+1.在应用下admin.py中引入自身的models模块（或里面模型的类）  
+2.编辑admin.py:admin.site.register(models.Article)
+3.在blog/admin.py编辑
+from django.contrib import admin  
+from  .models import Article  
+
+admin.site.register(Article)
+
+**配置admin应用**
+![后台界面](/admin.jpg)  
+
+**修改Article显示的标题**
+1.python3添加__str__(self)或__unicode_(self)
+2.return self.title
