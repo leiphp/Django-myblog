@@ -84,7 +84,18 @@ myFocus.set({
     <div class="blank"></div>
     <div class="topnews">
       <h2><span><a href="/" target="_blank">栏目标题</a><a href="/" target="_blank">栏目标题</a><a href="/" target="_blank">栏目标题</a></span><b>文章</b>推荐</h2>
-      <div class="blogs">
+      {% for article in articles%}
+        <!-- <a href="{% url 'blog:article_page' article.id %}">{{article.title}}</a> -->
+        <div class="blogs">
+          <figure><img src="{% static article.pub_img %}"></figure>
+          <ul>
+            <h3><a href="{% url 'blog:article_page' article.id %}">{{article.title}}</a></h3>
+            <p>{{article.content}}</p>
+            <p class="autor"><span class="lm f_l"><a href="https://www.100txy.com">雷小天</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_r">浏览（<a href="/">459</a>）</span><span class="pingl f_r">评论（<a href="/">30</a>）</span></p>
+          </ul>
+        </div>
+      {% endfor %}
+      <!-- <div class="blogs">
         <figure><img src="{% static "images/01.jpg" %}"></figure>
         <ul>
           <h3><a href="/">住在手机里的朋友</a></h3>
@@ -139,7 +150,8 @@ myFocus.set({
           <p>引导语：知道么，手机有备用电池，手机拨号码12593+电话号码=陷阱……手机具有很多你不知道的小秘密，说出来一定很惊奇！不信的话就来看看吧！...</p>
           <p class="autor"><span class="lm f_l"><a href="/">机友汇</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_r">浏览（<a href="/">459</a>）</span><span class="pingl f_r">评论（<a href="/">30</a>）</span></p>
         </ul>
-      </div>
+      </div> -->
+
     </div>
   </div>
   <div class="r_box f_r">
