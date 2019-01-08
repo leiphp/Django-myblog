@@ -1,7 +1,8 @@
 # Django-myblog
-Django入门与实践--Python制作个人博客网站，一个Python的高级Web框架，功能非常强大。  
+Django入门与实践--Python制作个人博客网站，一个Python的高级Web框架，功能非常强大，下面是项目预览，随便找了一套前端模板，目前只做了主页和文章页的界面。  
 ## 项目预览  
 ![项目前端](/indexshow.jpg)  
+![项目文章页](/article.jpg)  
 ![项目后台](/adminshow.png)  
 ## 开发环境
 1.Python  
