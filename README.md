@@ -16,8 +16,8 @@ Django的安装，可以使用pip install Django==2.0（为什么我要选2.0版
 What Python version can I use with Django?  
 Django version	Python versions  
 1.11	2.7, 3.4, 3.5, 3.6, 3.7 (added in 1.11.17)  
-2.0	3.4, 3.5, 3.6, 3.7  
-2.1, 2.2	3.5, 3.6, 3.7  
+2.0	  3.4, 3.5, 3.6, 3.7  
+2.1,  2.2	 3.5, 3.6, 3.7  
 
 编辑器  
 Pycharm（推荐）    
