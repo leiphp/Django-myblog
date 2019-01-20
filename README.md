@@ -8,7 +8,6 @@ Django入门与实践--Python制作个人博客网站，一个Python的高级Web
 1.Python  
 2.Django   
 3.编辑器  
-
 ## 搭建环境
 Python一般在系统里面有默认的，不需要安装。当然如果你想升级Python3.x话也是可以的，但是Django同时支持2.x和3.x，为减少不必要的麻烦，建议使用默认的版本即可。
 
